@@ -108,3 +108,13 @@ Built as a full-stack web development project using React and Supabase.
 ---
 
 **Paws and Care — A little extra care for those little paws. **
+## Screenshots
+
+### Homepage
+![Homepage](homepage.png.png)
+
+### Dashboard
+![Dashboard](dashboard.png.png)
+
+### Appointments
+![Appointments](appointment.png.png)
