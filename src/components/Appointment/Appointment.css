@@ -1,0 +1,313 @@
+.appointment-section {
+  padding: clamp(4.5rem, 8vw, 7rem) 0;
+  background: var(--charcoal);
+}
+
+.appointment-shell {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.appointment-header {
+  max-width: 720px;
+  margin: 0 auto 2.4rem;
+  text-align: center;
+}
+
+.appointment-badge {
+  color: #E99A78;
+}
+
+.appointment-title {
+  margin: 0.4rem 0 0.8rem;
+  color: var(--cream);
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+}
+
+.appointment-subtitle {
+  color: var(--sand);
+  font-size: 0.95rem;
+}
+
+.appointment-card {
+  padding: clamp(1.35rem, 4vw, 2.6rem);
+  color: var(--charcoal);
+  background: var(--cream);
+  border-top: 5px solid var(--orange);
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-row.two-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+
+.form-field label {
+  color: var(--charcoal);
+  font-size: 0.79rem;
+  font-weight: 800;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 47px;
+  padding: 0.7rem 0.8rem;
+  color: var(--charcoal);
+  background: var(--white);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #82776B;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(189, 87, 47, 0.12);
+  outline: none;
+}
+
+.form-field input.is-invalid,
+.form-field select.is-invalid,
+.form-field textarea.is-invalid {
+  border-color: #B33939;
+  background: #FFF8F6;
+}
+
+.form-field textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.field-error {
+  color: #A52E2E;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.appointment-form-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.4rem;
+}
+
+.btn-appointment-submit,
+.btn-appointment-reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0.8rem 1.5rem;
+  color: var(--white);
+  background: var(--orange);
+  border: 1px solid var(--orange);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.btn-appointment-submit:hover,
+.btn-appointment-reset:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+  transform: translateY(-2px);
+}
+
+.btn-appointment-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+.appointment-demo-note {
+  color: var(--text-muted);
+  font-size: 0.73rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.appointment-submit-error {
+  display: block;
+  text-align: center;
+}
+
+.appointment-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.appointment-success .success-badge {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+  place-items: center;
+  color: var(--white);
+  background: var(--orange);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.appointment-success .success-title {
+  margin-bottom: 0.75rem;
+  color: var(--charcoal);
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.appointment-success .success-reference,
+.appointment-success .success-message,
+.appointment-success .success-note {
+  max-width: 560px;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.appointment-success .success-reference {
+  margin-bottom: 0.7rem;
+  font-size: 0.9rem;
+}
+
+.appointment-success .success-message {
+  margin-bottom: 0.7rem;
+}
+
+.appointment-success .success-note {
+  margin-bottom: 1.3rem;
+  padding: 0.7rem 0.9rem;
+  color: var(--text-muted);
+  background: #E9DDCE;
+  font-size: 0.82rem;
+}
+
+.appointment-success .btn-appointment-reset {
+  color: var(--terracotta);
+  background: transparent;
+  border-color: var(--terracotta);
+}
+
+@media (max-width: 640px) {
+  .appointment-section {
+    padding: 3.8rem 0;
+  }
+
+  .form-row.two-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-appointment-submit {
+    width: 100%;
+  }
+}
+
+.appointment-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--sage);
+}
+
+.appointment-section::before,
+.appointment-section::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  pointer-events: none;
+}
+
+.appointment-section::before {
+  top: -8rem;
+  left: -6rem;
+  width: 28rem;
+  height: 28rem;
+  border: 1px solid rgba(34, 32, 30, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(242, 184, 75, 0.16);
+}
+
+.appointment-section::after {
+  right: -5rem;
+  bottom: -12rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 58% 42% 63% 37% / 44% 57% 43% 56%;
+  background: rgba(181, 160, 204, 0.44);
+  transform: rotate(20deg);
+}
+
+.appointment-shell {
+  position: relative;
+  z-index: 1;
+}
+
+.appointment-badge {
+  color: #36583D;
+}
+
+.appointment-title {
+  color: var(--charcoal);
+}
+
+.appointment-subtitle {
+  color: #344D40;
+}
+
+.appointment-card {
+  background: var(--cream);
+  border-top-color: var(--coral);
+  border-radius: 8px 30px 8px 8px;
+  box-shadow: 0 22px 56px rgba(34, 32, 30, 0.14);
+}
+
+.appointment-success .success-badge {
+  color: var(--charcoal);
+  background: var(--gold);
+  box-shadow: 0 0 0 8px rgba(242, 184, 75, 0.18);
+}
+
+.appointment-success .success-title {
+  max-width: 18ch;
+}
+
+.appointment-success .success-note {
+  background: var(--teal-wash);
+}
+
+.btn-appointment-submit {
+  color: var(--charcoal);
+  background: var(--gold);
+  border-color: var(--gold);
+  border-radius: 999px;
+  box-shadow: 0 8px 16px rgba(189, 87, 47, 0.13);
+}
+
+.btn-appointment-submit:hover {
+  color: var(--white);
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
